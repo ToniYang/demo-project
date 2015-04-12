@@ -1,7 +1,7 @@
-define ['backbone','jquery','static','underscore'] , (Backbone,$,global,_)->
+define ['backbone','jquery','static','underscore','text!templates/todo.html'] , (Backbone,$,global,_,todoTem)->
 	TodoView = Backbone.View.extend({
 		tagName : 'li'
-		template : _.template($('#todo-template').html())
+		template : _.template(todoTem)
 		events :
 			'click .checked' : 'changeStatus'
 			'dblclick label' :'edit'

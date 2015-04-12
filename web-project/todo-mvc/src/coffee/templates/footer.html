@@ -1,0 +1,9 @@
+<span id="todo-count"><strong><%= left %></strong> <%= left ===1 ? 'item' : 'items'%> left</span>
+<ul id="filter">
+    <li><a href="#/">All</a></li>
+    <li><a href="#/active">Active</a></li>
+    <li><a href="#/completed">Completed</a></li>
+</ul>
+<% if (completed) {%>
+<button id="clear-complated"> Clear completed items</button>
+<% } %>

@@ -1,0 +1,61 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'https://github.com/requirejs/text/tree/2.0.13',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 warn package.json demo@1.0.0 No repository field.
+5 silly cache add args [ 'https://github.com/requirejs/text/tree/2.0.13', null ]
+6 verbose cache add spec https://github.com/requirejs/text/tree/2.0.13
+7 silly cache add parsed spec { raw: 'https://github.com/requirejs/text/tree/2.0.13',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: 'https://github.com/requirejs/text/tree/2.0.13',
+7 silly cache add   spec: 'https://github.com/requirejs/text/tree/2.0.13',
+7 silly cache add   type: 'remote' }
+8 silly mapToRegistry name https://github.com/requirejs/text/tree/2.0.13
+9 silly mapToRegistry using default registry
+10 silly mapToRegistry registry https://registry.npmjs.org/
+11 silly mapToRegistry uri https://github.com/requirejs/text/tree/2.0.13
+12 verbose addRemoteTarball https://github.com/requirejs/text/tree/2.0.13 not in flight; adding
+13 verbose addRemoteTarball [ 'https://github.com/requirejs/text/tree/2.0.13', null ]
+14 info retry fetch attempt 1 at 11:14:54 PM
+15 info attempt registry request try #1 at 11:14:54 PM
+16 http fetch GET https://github.com/requirejs/text/tree/2.0.13
+17 verbose request id 30f24005203d842f
+18 http fetch 406 https://github.com/requirejs/text/tree/2.0.13
+19 error fetch failed https://github.com/requirejs/text/tree/2.0.13
+20 warn retry will retry, error on last attempt: Error: fetch failed with status code 406
+21 info retry fetch attempt 2 at 11:15:06 PM
+22 info attempt registry request try #1 at 11:15:06 PM
+23 http fetch GET https://github.com/requirejs/text/tree/2.0.13
+24 http fetch 406 https://github.com/requirejs/text/tree/2.0.13
+25 error fetch failed https://github.com/requirejs/text/tree/2.0.13
+26 warn retry will retry, error on last attempt: Error: fetch failed with status code 406
+27 info retry fetch attempt 3 at 11:16:10 PM
+28 info attempt registry request try #1 at 11:16:10 PM
+29 http fetch GET https://github.com/requirejs/text/tree/2.0.13
+30 http fetch 406 https://github.com/requirejs/text/tree/2.0.13
+31 error fetch failed https://github.com/requirejs/text/tree/2.0.13
+32 verbose stack Error: fetch failed with status code 406
+32 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/fetch.js:51:14)
+32 verbose stack     at Request.emit (events.js:107:17)
+32 verbose stack     at Request.onRequestResponse (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1176:10)
+32 verbose stack     at ClientRequest.emit (events.js:107:17)
+32 verbose stack     at HTTPParser.parserOnIncomingClient [as onIncoming] (_http_client.js:426:21)
+32 verbose stack     at HTTPParser.parserOnHeadersComplete (_http_common.js:111:23)
+32 verbose stack     at TLSSocket.socketOnData (_http_client.js:317:20)
+32 verbose stack     at TLSSocket.emit (events.js:107:17)
+32 verbose stack     at readableAddChunk (_stream_readable.js:163:16)
+32 verbose stack     at TLSSocket.Readable.push (_stream_readable.js:126:10)
+33 verbose cwd /Users/yangyuhan/IdeaProjects/workspace/demo-project
+34 error Darwin 14.1.0
+35 error argv "node" "/usr/local/bin/npm" "install" "https://github.com/requirejs/text/tree/2.0.13" "--save-dev"
+36 error node v0.12.2
+37 error npm  v2.7.4
+38 error fetch failed with status code 406
+39 error If you need help, you may report this error at:
+39 error     <https://github.com/npm/npm/issues>
+40 verbose exit [ 1, true ]

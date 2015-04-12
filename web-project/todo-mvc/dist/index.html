@@ -19,23 +19,4 @@
         <footer id="footer"></footer>
     </section>
 </body>
-<script type="text/template" id="todo-template">
-    <div class="view">
-        <input class="checked" type="checkbox" <%= completed? 'checked' : ''%>/>
-        <label><%- title %></label>
-        <button class="remove"></button>
-    </div>
-    <input class="edit" value="<%- title %>"/>
-</script>
-<script type="text/template" id="footer-template">
-    <span id="todo-count"><strong><%= left %></strong> <%= left ===1 ? 'item' : 'items'%> left</span>
-    <ul id="filter">
-        <li><a href="#/">All</a></li>
-        <li><a href="#/active">Active</a></li>
-        <li><a href="#/completed">Completed</a></li>
-    </ul>
-    <% if (completed) {%>
-        <button id="clear-complated"> Clear completed items</button>
-    <% } %>
-</script>
 </html>

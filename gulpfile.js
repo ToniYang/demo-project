@@ -17,4 +17,9 @@ gulp.task('copy-lib' , function (){
         .pipe(gulp.dest('web-project/todo-mvc/src/js'))
 });
 
-gulp.task('default' ,['coffee','copy-lib']);
+gulp.task('copy-templates' ,function(){
+    gulp.src('web-project/todo-mvc/src/coffee/**/**.html')
+        .pipe(gulp.dest('web-project/todo-mvc/src/js'))
+});
+
+gulp.task('default' ,['coffee','copy-lib','copy-templates']);

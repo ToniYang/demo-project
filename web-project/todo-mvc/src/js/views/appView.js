@@ -1,10 +1,10 @@
 (function() {
-  define(['backbone', 'TodoList', 'jquery', 'underscore', 'static', 'TodoView'], function(Backbone, TodoList, $, _, global, TodoView) {
+  define(['backbone', 'TodoList', 'jquery', 'underscore', 'static', 'TodoView', 'text!templates/footer.html'], function(Backbone, TodoList, $, _, global, TodoView, footerTem) {
     'use strict';
     var AppView;
     AppView = Backbone.View.extend({
       el: '#app',
-      footerTemplate: _.template($('#footer-template').html()),
+      footerTemplate: _.template(footerTem),
       events: {
         'keypress #input-todo': 'createTodo',
         'click #trigger-all': 'triggerAll',

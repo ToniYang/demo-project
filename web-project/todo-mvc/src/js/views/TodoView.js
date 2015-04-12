@@ -1,9 +1,9 @@
 (function() {
-  define(['backbone', 'jquery', 'static', 'underscore'], function(Backbone, $, global, _) {
+  define(['backbone', 'jquery', 'static', 'underscore', 'text!templates/todo.html'], function(Backbone, $, global, _, todoTem) {
     var TodoView;
     TodoView = Backbone.View.extend({
       tagName: 'li',
-      template: _.template($('#todo-template').html()),
+      template: _.template(todoTem),
       events: {
         'click .checked': 'changeStatus',
         'dblclick label': 'edit',

@@ -20,7 +20,8 @@
         static : 'static/static',
         TodoView : 'views/TodoView',
         router : 'routers/router',
-        localStorage : 'lib/localstorage/backbone.localStorage'
+        localStorage : 'lib/localstorage/backbone.localStorage',
+        text : 'lib/text/text'
     },
     shim: {
         underscore: {

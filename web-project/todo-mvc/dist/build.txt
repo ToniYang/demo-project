@@ -13,6 +13,9 @@ js/lib/localstorage/backbone.localStorage.js
 js/collections/todoList.js
 js/static/static.js
 js/routers/router.js
+js/lib/text/text.js
+text!templates/todo.html
 js/views/TodoView.js
+text!templates/footer.html
 js/views/appView.js
 js/app.js
