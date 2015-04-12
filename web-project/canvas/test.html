@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 test</title>
+</head>
+<body>
+	<header>
+		<h1>demo</h1>
+	</header>
+	<canvas id = 'canvas'  height="500" width="500" style = "border : 1px solid red">
+	</canvas>
+</body>
+<script type="text/javascript">
+	var app = {};
+	//draw an oblong
+	app.canvas = document.getElementById('canvas');
+	app.ctx = app.canvas.getContext('2d');
+	app.ctx.fillStyle = 'green';
+	app.hasSeleted = false;
+	app.beginX = 50;
+	app.beginY = 50;
+	app.canvas.box = app.canvas.getBoundingClientRect();
+	app.mouseBeginX = 0;
+	app.mouseBeginY = 0;
+	
+
+	app.canvas.onmousedown = function(e) {
+		var mouseX = e.clientX - app.canvas.box.left;
+		var mouseY = e.clientY - app.canvas.box.top;
+		if(mouseX > app.beginX && mouseX < (app.beginX + 60) && mouseY > app.beginY && mouseY < (app.beginY + 60))
+		{
+			app.mouseBeginX = e.clientX;
+			app.mouseBeginY = e.clientY;
+			app.hasSeleted = true;
+		}
+	};
+
+	app.canvas.onmouseup = function(){
+		app.hasSeleted = false;
+	};
+
+	document.onmouseup = function(){
+		app.hasSeleted = false;
+	};
+
+	function draw (x,y){
+		app.ctx.clearRect(0,0,500,500);
+		app.ctx.fillRect(x,y,60,60);
+		app.beginX = x;
+		app.beginY = y;
+	}
+
+	app.canvas.onmousemove = function(e){
+		if(app.hasSeleted){
+			var movedX = app.beginX + e.clientX - app.mouseBeginX;
+			var movedY = app.beginY + e.clientY - app.mouseBeginY;
+			app.mouseBeginX = e.clientX;
+			app.mouseBeginY = e.clientY;
+			draw(movedX,movedY);
+		}
+	};
+
+	draw(app.beginX,app.beginY);
+
+
+</script>
+</html>
